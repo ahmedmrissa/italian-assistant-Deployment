@@ -1,0 +1,27 @@
+{
+  "build": {
+    "builder": "DOCKERFILE",
+    "dockerfilePath": "Dockerfile"
+  },
+  "deploy": {
+    "startCommand": "rasa train && rasa run --port 5005 --host 0.0.0.0 & rasa run actions --port 5055 --host 0.0.0.0",
+    "healthcheck": {
+      "path": "/",
+      "port": 5005
+    }
+  },
+  "env": {
+    "SUPABASE_URL": {
+      "required": true,
+      "sync": false
+    },
+    "SUPABASE_KEY": {
+      "required": true,
+      "sync": false
+    },
+    "SUPABASE_DB_URL": {
+      "required": true,
+      "sync": false
+    }
+  }
+}

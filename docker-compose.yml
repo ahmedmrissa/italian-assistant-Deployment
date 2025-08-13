@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  rasa:
+    build: .
+    ports:
+      - "5005:5005"
+    environment:
+      - SUPABASE_URL=${SUPABASE_URL}
+      - SUPABASE_KEY=${SUPABASE_KEY}
+      - SUPABASE_DB_URL=${SUPABASE_DB_URL}
+    env_file:
+      - .env
+    volumes:
+      - ./models:/app/models
+      - ./data:/app/data
+    command: rasa run --port 5005
+
+  rasa-action-server:
+    build: .
+    ports:
+      - "5055:5055"
+    environment:
+      - SUPABASE_URL=${SUPABASE_URL}
+      - SUPABASE_KEY=${SUPABASE_KEY}
+      - SUPABASE_DB_URL=${SUPABASE_DB_URL}
+    env_file:
+      - .env
+    volumes:
+      - ./actions:/app/actions
+    command: rasa run actions --port 5055

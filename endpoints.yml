@@ -1,0 +1,15 @@
+action_endpoint:
+  url: "http://localhost:5055/webhook"
+
+tracker_store:
+  type: SQL
+  dialect: "postgresql"
+  url: ${SUPABASE_DB_URL}
+
+#lock_store:
+#  type: "redis"
+#  url: ${REDIS_URL}
+
+#event_broker:
+#  type: "pika"
+#  url: ${RABBITMQ_URL}

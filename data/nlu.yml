@@ -1,0 +1,102 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - Ciao
+    - Salve
+    - Buongiorno
+    - Buonasera
+    - Hey
+    - Saluti
+
+- intent: goodbye
+  examples: |
+    - Ciao
+    - Arrivederci
+    - Buona giornata
+    - A dopo
+    - A presto
+
+- intent: affirm
+  examples: |
+    - Sì
+    - Si
+    - Sì, per favore
+    - Sì, grazie
+    - Esatto
+    - Perfetto
+
+- intent: deny
+  examples: |
+    - No
+    - No, grazie
+    - Non proprio
+    - Non necessariamente
+
+- intent: mood_great
+  examples: |
+    - Perfetto
+    - Grande
+    - Straordinario
+    - Mi sento bene
+    - Sono felice
+    - Sono eccitato
+
+- intent: mood_unhappy
+  examples: |
+    - Triste
+    - Molto triste
+    - Infelice
+    - Male
+    - Molto male
+    - Terribile
+    - Non capisco
+
+- intent: ask_for_help
+  examples: |
+    - Non capisco
+    - Puoi aiutarmi?
+    - Ho bisogno di aiuto
+    - Aiuto
+    - Non so cosa fare
+
+- intent: login
+  examples: |
+    - Vorrei accedere
+    - Accedi
+    - Fai il login
+    - Ho bisogno di accedere
+    - Posso fare il login?
+
+- intent: register
+  examples: |
+    - Vorrei registrarmi
+    - Registrati
+    - Crea un account
+    - Ho bisogno di registrarmi
+    - Posso creare un account?
+
+- intent: save_progress
+  examples: |
+    - Salva i miei progressi
+    - Vorrei salvare i progressi
+    - Salva progressi
+    - Conserva i miei dati
+    - Puoi salvare la mia posizione?
+
+- intent: load_progress
+  examples: |
+    - Carica i miei progressi
+    - Vorrei caricare i progressi
+    - Carica progressi
+    - Recupera i miei dati
+    - Puoi caricare la mia posizione?
+
+- intent: save_conversation
+  examples: |
+    - Salva questa conversazione
+    - Vorrei salvare la conversazione
+    - Salva chat
+    - Conserva questa discussione
+    - Puoi salvare questa conversazione?

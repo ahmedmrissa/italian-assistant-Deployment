@@ -1,0 +1,73 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - ask_for_help
+  - login
+  - register
+  - save_progress
+  - load_progress
+  - save_conversation
+
+entities:
+  - grammar_point
+  - vocabulary_word
+  - topic
+  - level
+  - email
+  - password
+  - name
+
+slots:
+  user_id:
+    type: text
+    influence_conversation: false
+  user_level:
+    type: text
+    influence_conversation: false
+
+responses:
+  utter_greet:
+  - text: "Ciao! Come posso aiutarti oggi?"
+  utter_cheer_up:
+  - text: "Ecco un panda per tirarti su di morale:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+  utter_did_that_help:
+  - text: "Ti è piaciuto?"
+  utter_happy:
+  - text: "Ottimo!"
+  utter_goodbye:
+  - text: "Ciao, alla prossima!"
+  utter_iamabot:
+  - text: "Sono un bot, alimentato da Rasa."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+actions:
+  - action_explain_grammar
+  - action_teach_vocabulary
+  - action_start_conversation
+  - action_change_topic
+  - action_set_user_level
+  - action_show_progress
+  - action_provide_exercise
+  - action_evaluate_exercise
+  - action_provide_pronunciation_exercise
+  - action_evaluate_pronunciation
+  - action_share_cultural_info
+  - action_ask_name
+  - action_login
+  - action_register
+  - action_logout
+  - action_supabase_login
+  - action_supabase_register
+  - action_save_progress
+  - action_load_progress
+  - action_save_conversation
