@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: rasa-bot
+    env: docker
+    plan: free
+    autoDeploy: true
+    dockerfilePath: deployment/Dockerfile
+    dockerContext: deployment
+    envVars:
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_KEY
+        sync: false
+      - key: SUPABASE_DB_URL
+        sync: false
+      - key: RASA_TELEMETRY_ENABLED
+        value: "false"
